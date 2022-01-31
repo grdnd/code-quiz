@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Coding Quiz</title>
 </head>
+
 <body>
     <section class="stats-timer">
         <div id="timer">60</div>
@@ -14,11 +15,11 @@
     </section>
 
     <section class="strt-container">    
-        <button id="strt-btn">Start</button>
+        <button id="strt-btn" class="hidden">Start</button>
     </section>
 
-    <div class="questionCard">
-        <div id="question" class="hidden">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet aperiam recusandae suscipit consequuntur quos.</div>
+    <div id="questionCard" class="hidden">
+        <div id="question">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet aperiam recusandae suscipit consequuntur quos.</div>
             <div class="grid-container">
                 <button class="grid-item correct" id="option1">Option 1</button>
                 <button class="grid-item wrong" id="option2">Option 2</button>
