@@ -1,0 +1,151 @@
+:root {
+    --darkblue: #1F363D;
+    --teal: #40798C;
+    --text-color: #70A9A1;
+    --green: #9EC1A3;
+    --light: #CFE0C3;
+    --box-shadow: 0 4px 10px 8px rgba(0,0,0,0.2);
+    --rem: 1rem
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Class for hidden options */
+.hidden {
+    display: none;
+}
+
+/* Styling for scores and timer container */
+.stats-timer {
+    text-align: center;
+    width: auto;
+    background-color: var(--darkblue);
+    box-shadow: var(--box-shadow)
+}
+
+/* Setting page background and text color */
+body {
+    background-color: var(--darkblue);
+    color: var(--green)
+}
+
+/* Link to view last high scores */
+#viewScores {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    color: var(--teal);
+    padding: 0 0 1rem 0;
+}
+
+/* Hover styling for scores link */
+#viewScores:hover {
+    color: var(--light);
+}
+
+/* Styling for top timer */
+#timer {
+    padding: 1rem 0 0 0;
+    font-size: 2rem;
+    color: var(--light);
+}
+
+/* Orient start button container center */
+.strt-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 25vh;
+}
+
+/* Start button styling */
+#strt-btn {
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 2rem;
+    width: 200px;
+    border-color: var(--teal);
+    background-color: var(--teal);
+    color: var(--light);
+    box-shadow: var(--box-shadow)
+}
+
+/* Start button hover styling */
+#strt-btn:hover {
+    background-color: var(--darkblue);
+}
+
+/* Flexbox card to contain questions and answer options */
+.questionCard {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: .5rem;
+    padding: 2rem 2rem 1rem 2rem;
+    max-width: 50vw;
+    max-height: 80vh;
+    background-color: var(--teal);
+}
+
+/* Styling for Question line */
+#question {
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    color: var(--green);
+}
+
+/* Build grid for the 4 answer options */
+.grid-container {
+    border: none;
+    display: grid;
+    grid-template-areas: "option1 option2"
+                         "option3 option4";
+    margin: 6rem;
+    padding: 10px;
+    grid-gap: var(--rem);
+  }
+
+  /* Styling for individual question options */
+    .grid-item {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        background-color: var(--green);
+        border: 1px solid var(--teal);
+        border-radius: 5px;
+        padding: 10px 10px;
+        min-width: 200px;
+        font-size: var(--rem);
+        box-shadow: var(--box-shadow)
+    }
+    /* Added styling and pointer cursor on hover */
+    .grid-item:hover {
+        background-color: var(--teal);
+        color: var(--light);
+        border: 1px black
+        cursor: pointer;
+    }
+    /* Correct option styling */
+    .grid-item.correct:hover {
+        color: var(--light);
+        background-color: var(--light);
+    }
+    /* Incorrect option styling */
+    .grid-item.wrong:hover {
+        background: var(--darkblue);
+        color: var(--darkblue);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .stats-timer {
+        width: 100vw;
+    }
+}
