@@ -14,9 +14,9 @@
 }
 
 /* Class for hidden options */
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
 /* Styling for scores and timer container */
 .stats-timer {
@@ -83,7 +83,7 @@ body {
 }
 
 /* Flexbox card to contain questions and answer options */
-.questionCard {
+#questionCard {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -103,13 +103,13 @@ body {
 
 /* Build grid for the 4 answer options */
 .grid-container {
+    margin: 3rem;
+    padding: 2rem;
     border: none;
     display: grid;
     grid-template-areas: "option1 option2"
                          "option3 option4";
-    margin: 6rem;
-    padding: 10px;
-    grid-gap: var(--rem);
+    grid-gap: 2rem;
   }
 
   /* Styling for individual question options */
@@ -121,7 +121,7 @@ body {
         border: 1px solid var(--teal);
         border-radius: 5px;
         padding: 10px 10px;
-        min-width: 200px;
+        width: auto;
         font-size: var(--rem);
         box-shadow: var(--box-shadow)
     }
@@ -141,11 +141,5 @@ body {
     .grid-item.wrong:hover {
         background: var(--darkblue);
         color: var(--darkblue);
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .stats-timer {
-        width: 100vw;
     }
 }
