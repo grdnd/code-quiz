@@ -1,13 +1,13 @@
 const startBtn = document.getElementById('strt-btn')
+const questionContainerEl = document.getElementById('question-container')
 
 startBtn.addEventListener('click', startGame)
 
 function startGame() {
   console.log('Started')
- //   questionCardEl.classList.remove('hidden')
- //   document.getElementById('strt-container').style.display = 'block'
- //   containerEl.classList.add('hidden')
-  
+  startBtn.classList.add('hidden')
+  questionContainerEl.classList.remove('hidden')
+
 }
 
 // function nextQuestion() {
@@ -17,6 +17,8 @@ function startGame() {
 // function Answer() {
 
 // }
+
+
 
 // var timer = 60;
 // var interval = setInterval(function(){
