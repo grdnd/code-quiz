@@ -4,17 +4,19 @@ startBtn.addEventListener('click', startGame)
 
 function startGame() {
   console.log('Started')
-  // document.getElementById('strt-container').style.display = 'block'
-  // questionCardEl.classList.remove('hidden')
+ //   questionCardEl.classList.remove('hidden')
+ //   document.getElementById('strt-container').style.display = 'block'
+ //   containerEl.classList.add('hidden')
+  
 }
 
-function nextQuestion() {
+// function nextQuestion() {
 
-}
+// }
 
-function Answer() {
+// function Answer() {
 
-}
+// }
 
 // var timer = 60;
 // var interval = setInterval(function(){
@@ -26,4 +28,3 @@ function Answer() {
 //     prompt("Initials: ");
 //   }
 // }, 1000);
-
