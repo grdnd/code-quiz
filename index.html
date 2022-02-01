@@ -9,25 +9,30 @@
 </head>
 
 <body>
+    <!-- Upper bar containing timer and scoresheet -->
     <section class="stats-timer">
         <div id="timer">60</div>
         <button id="viewScores" class="prompt">View Highscores</button>
     </section>
-
-    <section class="strt-container">    
-        <button id="strt-btn" class="hidden">Start</button>
+    <!-- Container for start button -->
+    <section class="container">
+        <div id="strt-container">    
+            <button id="strt-btn" class="strt-btn">Start</button>
+        </div>    
     </section>
-
-    <div id="questionCard" class="hidden">
-        <div id="question">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet aperiam recusandae suscipit consequuntur quos.</div>
-            <div class="grid-container">
-                <button class="grid-item correct" id="option1">Option 1</button>
-                <button class="grid-item wrong" id="option2">Option 2</button>
-                <button class="grid-item" id="option3">Option 3</button>
-                <button class="grid-item" id="option4">Option 4</button>
+    <!-- Container for Questions and Answer Options -->
+    <div class="questionContainer hidden">
+        <div id="questionCard">
+            <div id="question">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet aperiam recusandae suscipit consequuntur quos.</div>
+                <div id="options" class="grid-container">
+                    <button id="option1" class="grid-item">Option 1</button>
+                    <button id="option2" class="grid-item">Option 2</button>
+                    <button id="option3" class="grid-item">Option 3</button>
+                    <button id="option4" class="grid-item">Option 4</button>
+                </div>
             </div>
         </div>
-    </div>
+    </div>    
 <script src="./assets/js/script.js"></script>   
 </body>
 </html>
