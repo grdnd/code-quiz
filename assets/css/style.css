@@ -22,7 +22,6 @@
 .stats-timer {
     text-align: center;
     width: auto;
-    background-color: var(--darkblue);
     box-shadow: var(--box-shadow)
 }
 
@@ -30,6 +29,11 @@
 body {
     background-color: var(--darkblue);
     color: var(--green)
+    display: flex;
+    width: 100vw
+    height: 100vh
+    justify-content: center;
+    align-items: center;
 }
 
 /* Link to view last high scores */
@@ -119,6 +123,7 @@ body {
         justify-content: center;
         background-color: var(--green);
         border: 1px solid var(--teal);
+        white-space: nowrap;
         border-radius: 5px;
         padding: 10px 10px;
         width: auto;
