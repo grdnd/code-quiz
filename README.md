@@ -1,6 +1,6 @@
 # Homework 04: Coding Quiz App
 ## 📋 Description
-    The Coding Quiz is designed to be a mock-up coding assessment that we, as students, will likely have to take at some point during our Web Development journey. By utilizing HTML, CSS, and JavaScript, we are able to build a coding quiz that will test users on their coding knowledge.
+The Coding Quiz is designed to be a mock-up coding assessment that we, as students, will likely have to take at some point during our Web Development journey. By utilizing HTML, CSS, and JavaScript, we are able to build a coding quiz that will test users on their coding knowledge.
 
 ## Installation 💾
     No installation required!
