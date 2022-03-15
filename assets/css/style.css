@@ -62,6 +62,7 @@ a:hover {
 .start-screen {
     text-align: center;
 }
+
 /* Apply Flex to Containers */
 div.container,
 div.results-screen {
@@ -86,14 +87,17 @@ section h1 {
     color: var(--text-color);
     font-size: 2rem;
 }
+
 section p {
     color: var(--text-color);
     margin: 10px;
     padding: 10px;
 }
+
 #caution {
     color: red;
 }
+
 /* Start Btn Styling */
 .strt-btn {
     font-family: 'Questrial', sans-serif;
@@ -105,6 +109,7 @@ section p {
     padding: 20px;
     width: 200px;
 }
+
 .strt-btn:hover {
     background-color: var(--darkblue);
     box-shadow: 0 4px 10px 8px rgba(0,0,0,0.2);
@@ -237,12 +242,12 @@ input:focus {
 
 /* Highscores title styling */
 .title {
-    padding-top: 20px;
-    font-size: 3rem;
-    color: var(--text-color);
-    box-shadow: 0 4px 10px 8px rgba(0,0,0,0.2);
+    padding-top: 10px;
+    font-size: 2rem;
+    color: var(--light);
     text-align: center;
-    height: 5rem;
+    height: 3rem;
+    box-shadow: 0 4px 10px 8px rgba(0,0,0,0.2);
 }
 
 hr {
@@ -255,8 +260,8 @@ hr {
 
 #highscores {
     color: var(--light);
-    font-size: 1.4rem;
-    padding: 1rem;
+    font-size: 1rem;
+    padding: 1.2rem;
 }
 
 #scorecard {
@@ -266,7 +271,7 @@ hr {
     height: auto;
     text-align: center;
     box-shadow: 0 0px 10px 8px rgba(0,0,0,0.2);
-    border: 2px solid var(--green)
+    border: 2px solid var(--green);
 }
 
 ol {
