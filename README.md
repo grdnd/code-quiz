@@ -1,1 +1,4 @@
-# coding-quiz
+# Coding Quiz App
+## Description
+Homework 
+
