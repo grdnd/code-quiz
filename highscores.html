@@ -9,14 +9,21 @@
   </head>
 
   <body>
+    <header>
+      <h1 class="title">Highscores</h1>
+    </header>
     <div class="container">
-      <h1>Highscores</h1>
-      <ol id="highscores" class=""></ol>
-
-      <a href="index.html"><button>Go Back</button></a>
+      <div class="container">
+        <div id="scorecard" class="card">
+          <ol id="highscores" class=""></ol>
+        </div>
+      </div>
+      <hr>
+      <a href="index.html"><button id="backBtn">Go Back</button></a>
       <button id="clear">Clear Highscores</button>
     </div>
-
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/highscores.js"></script>
+
   </body>
 </html>
