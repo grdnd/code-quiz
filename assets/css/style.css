@@ -1,140 +1,167 @@
+/* CSS Variables */
 :root {
     --darkblue: #1F363D;
     --teal: #40798C;
     --text-color: #70A9A1;
     --green: #9EC1A3;
     --light: #CFE0C3;
-    --box-shadow: 0 4px 10px 8px rgba(0,0,0,0.2);
-    --rem: 1rem
 }
 
+/* Reset */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Class for hidden options */
+/* Body Styling */
+body {
+    font-family: 'Questrial', sans-serif;
+    background-color: var(--darkblue);
+    width: 100%;
+    height: 100%;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--darkblue);
+}
+
+.stats-timer {
+    width: auto;
+    text-align: center;
+    box-shadow: 0 4px 10px 8px rgba(0,0,0,0.2);
+    padding: 10px 0 10px 0;
+}
+
+/* Timer Styling */
+div.timer {
+    color: var(--light);
+    font-size: 1rem;
+}
+
+#time {
+    font-size: 2rem;
+}
+
+/* Scoresheet Container Styling */
+.scoresheet {
+    padding: 5px 0 5px 0;
+}
+
+/* Highscores Btn styling */
+a {
+    cursor: pointer;
+    color: var(--teal);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--light);
+}
+
+.start-screen {
+    text-align: center;
+}
+/* Apply Flex to Containers */
+div.container,
+div.results-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+section.container {
+    margin: 2rem;
+}
+
+/* Hide Class for hidden objects */
 .hidden {
     display: none;
 }
 
-/* Styling for scores and timer container */
-.stats-timer {
-    text-align: center;
-    width: auto;
-    box-shadow: var(--box-shadow)
-}
-
-/* Setting page background and text color */
-body {
-    background-color: var(--darkblue);
-    color: var(--green)
-    display: flex;
-    width: 100vw
-    height: 100vh
-    justify-content: center;
-    align-items: center;
-}
-
-/* Link to view last high scores */
-#viewScores {
-    background:none;
-    border:none;
-    margin:0;
-    padding:0;
-    cursor: pointer;
-    color: var(--teal);
-    padding: 0 0 1rem 0;
-}
-
-/* Hover styling for scores link */
-#viewScores:hover {
-    color: var(--light);
-}
-
-/* Styling for top timer */
-#timer {
-    padding: 1rem 0 0 0;
+section h1 {
+    color: var(--text-color);
     font-size: 2rem;
-    color: var(--light);
 }
-
-/* Orient start button container center */
-#strt-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100vw;
-    height: 25vh;
+section p {
+    color: var(--text-color);
+    margin: 10px;
+    padding: 10px;
 }
-
-/* Start button styling */
+#caution {
+    color: red;
+}
+/* Start Btn Styling */
 .strt-btn {
-    border-radius: 0.5rem;
-    font-size: 1.5rem;
-    padding: 2rem;
-    width: 200px;
-    border-color: var(--teal);
-    background-color: var(--teal);
+    font-family: 'Questrial', sans-serif;
     color: var(--light);
-    box-shadow: var(--box-shadow)
+    background-color: var(--darkblue);
+    /* border-color: black; */
+    border-radius: 20px;
+    font-size: 1.5rem;
+    padding: 20px;
+    width: 200px;
 }
-
-/* Start button hover styling */
 .strt-btn:hover {
     background-color: var(--darkblue);
+    box-shadow: 0 4px 10px 8px rgba(0,0,0,0.2);
 }
 
-/* Flexbox card to contain questions and answer options */
-#questionCard {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: .5rem;
-    padding: 2rem 2rem 1rem 2rem;
-    max-width: 50vw;
-    max-height: 80vh;
-    background-color: var(--teal);
+
+/* Card Styling */
+#card {
+    width: 50%;
+    height: 250px;
+    border-radius: 20px;
+    background-color: var(--text-color);
+    padding: 2rem 1rem 1rem 1rem;
+    box-shadow: 0 4px 10px 8px rgba(0,0,0,0.2);
 }
 
-/* Styling for Question line */
+/* Question Container Styling */
 #question {
-    padding: 1rem 1rem;
-    font-size: 1.5rem;
-    color: var(--green);
+    color: var(--darkblue);
+    margin: 1rem 1rem 1rem 1rem;
+    font-size: 1.2rem;
+}
+
+/* Current Question Styling */
+#question-title {
+    margin: 0 0 4rem 0;
 }
 
 /* Build grid for the 4 answer options */
 .grid-container {
-    margin: 3rem;
-    padding: 2rem;
     border: none;
     display: grid;
     grid-template-areas: "option1 option2"
                          "option3 option4";
-    grid-gap: 2rem;
-  }
+    grid-gap: 1rem;
+    margin: 1rem;
+}
 
-  /* Styling for individual question options */
+/* Styling for individual question options */
     .grid-item {
+        font-family: 'Questrial', sans-serif;
         display: flex;
         text-align: center;
         justify-content: center;
-        background-color: var(--green);
-        border: 1px solid var(--teal);
+        background-color: var(--teal);
+        font-size: 1rem;
         white-space: nowrap;
-        border-radius: 5px;
+        border-radius: 20px;
         padding: 10px 10px;
         width: auto;
-        font-size: var(--rem);
-        box-shadow: var(--box-shadow)
     }
+
     /* Added styling and pointer cursor on hover */
     .grid-item:hover {
-        background-color: var(--teal);
-        color: var(--light);
-        border: 1px black
+        background-color: var(--green);
+        color: var(--text-color);
+        border: 1px black;
         cursor: pointer;
     }
     /* Correct option styling */
@@ -147,4 +174,50 @@ body {
         background: var(--darkblue);
         color: var(--darkblue);
     }
+
+/* Results Page Container */
+.results {
+    color: var(--text-color);
+}
+
+/* Results Title Styling */
+h2 {
+    font-size: 2rem;
+    margin: 5px;
+}
+
+/* Player Score Styling */
+.playerScore {
+    margin: 5px;
+    padding: 5px;
+}
+
+#userScore {
+    color: red;
+}
+
+/* Score Input Styling */
+input[type="text"] {
+    font-family: 'Questrial', sans-serif;
+    height: 1.5rem;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+input:focus {
+    outline: none;
+    color: red;
+}
+
+/* Submit Btn Styling */
+#submit {
+    font-family: 'Questrial', sans-serif;
+    color: var(--light);
+    background-color: var(--darkblue);
+    border-radius: 20px;
+    padding: 10px; 
+}
+#submit:hover{
+    box-shadow: 0 4px 10px 8px rgba(0,0,0,0.2);
 }
