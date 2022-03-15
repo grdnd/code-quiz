@@ -4,7 +4,6 @@ The Coding Quiz is designed to be a mock-up coding assessment that we, as studen
 
 ## Installation 💾
     No installation required!
-<br>
 
 ## 🔗 Usage 🔗
 ![Coding Quiz](https://user-images.githubusercontent.com/93315369/158428750-5c469823-3b75-48d4-a59f-b28c5d167e25.gif)
