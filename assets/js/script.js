@@ -4,8 +4,8 @@ const questions = [
     title: "Commonly used data types DO NOT include:",
     choices: 
     [
-      "strings",
       "booleans",
+      "strings",
       "alerts",
       "numbers"
     ],
@@ -16,8 +16,8 @@ const questions = [
     choices:
     [
       "quotes",
-      "curly brackets",
       "parentheses",
+      "curly brackets",
       "square brackets"
     ],
     answer: "parentheses"
@@ -37,9 +37,9 @@ const questions = [
     title: "String values must be enclosed within ___ when being assigned to variables.",
     choices:
     [
+      "quotes",
       "commas",
       "curly brackets",
-      "quotes",
       "parentheses"
     ],
     answer: "quotes"
@@ -49,9 +49,9 @@ const questions = [
     choices: 
     [
       "JavaScript",
-    "terminal / bash",
-    "for loops",
-    "console.log"
+      "terminal / bash",
+      "console.log",
+      "for loops"
     ],
     answer: "console.log"
   }
@@ -62,9 +62,6 @@ let totalTime = questions.length * 15;
 let timer;
 let shuffleQuestions, currentQuestionIndex;
 
-
-// GIVEN I am taking a code quiz:
-
 // Reference variables
 const timerEl = document.getElementById("time");
 const startBtn = document.getElementById('strt-btn');
@@ -72,7 +69,12 @@ const questionCardEl = document.getElementById('card');
 const questionEl = document.getElementById('question-title');
 const startScreen = document.getElementById('start-screen');
 const optionsEl = document.getElementById('options');
+const checkEl = document.getElementById('check');
 // const optionBtn = document.getElementById('optionBtn');
+
+// GIVEN I am taking a code quiz:
+// WHEN I click the start button
+// THEN a timer starts and I am presented with a question
 
   // startGame event listener
 startBtn.addEventListener('click', startGame);
@@ -88,9 +90,6 @@ function startGame() {
 
   // Reveal question cards at game start
   questionCardEl.classList.remove('hidden');
-
-// WHEN I click the start button
-// THEN a timer starts and I am presented with a question
 
   // set question index to 0
   currentQuestionIndex = 0;
@@ -113,7 +112,7 @@ function nextQuestion() {
 }
 
 function currentQuestion(title) {
-  questionEl.innerText = title.title
+  questionEl.innerText = title.title;
 
   optionsEl.innerText = "";
 
@@ -124,17 +123,42 @@ function currentQuestion(title) {
 
     option.textContent = i + 1 + ". " + choice;
 
-    // option.onclick = questionClick;
+    option.onclick = guess;
 
     optionsEl.appendChild(option);
   })
 }
 
+// Function to check for player guess action
+function guess() {
+  if (this.value !== questions[currentQuestionIndex].answer) {
+    totalTime -=15;
 
-//   // Picks question based on current index
-//   let currentQuestion = questions[currentQuestionIndex];
+    if(totalTime < 0) {
+     totalTime = 0;
+    }
 
+    timerEl.textContent = totalTime;
 
+    checkEl.textContent = "Try Again";
+  } else {
+    checkEl.textContent = "Nice!";
+  }
+
+  // flash right/wrong check on page for half a second
+  checkEl.setAttribute("class", "check");
+  setTimeout(function() {
+    checkEl.setAttribute("class", "check hide");
+  }, 1000);
+
+  currentQuestionIndex++;
+  // Next question in array
+  if (currentQuestionIndex === questions.length) {
+    gameOver();
+  } else {
+    nextQuestion();
+  }
+}
 // Countdown timer function
 function countdown() {
   // Add decrement to total time for countdown
@@ -143,8 +167,20 @@ function countdown() {
 
   // check if user has run out of time
   if (totalTime <= 0) {
-    quizEnd();
+    gameOver();
   }
+}
+
+gameOver = () => {
+  clearInterval(timer);
+
+  questionCardEl.classList.add('hidden');
+
+  const resultsEl = document.getElementById('results');
+  resultsEl.classList.remove('hidden');
+
+  const userScore = document.getElementById('userScore');
+  userScore.textContent = totalTime;
 }
 
 
