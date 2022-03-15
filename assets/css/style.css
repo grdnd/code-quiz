@@ -114,7 +114,7 @@ section p {
 /* Card Styling */
 #card {
     width: 50%;
-    height: 250px;
+    height: auto;
     border-radius: 20px;
     background-color: var(--text-color);
     padding: 2rem 1rem 1rem 1rem;
@@ -123,14 +123,14 @@ section p {
 
 /* Question Container Styling */
 #question {
-    color: var(--darkblue);
+    color: var(--light);
     margin: 1rem 1rem 1rem 1rem;
     font-size: 1.2rem;
 }
 
 /* Current Question Styling */
 #question-title {
-    margin: 0 0 4rem 0;
+    margin: 0 0 3rem 2rem;
 }
 
 /* Build grid for the 4 answer options */
@@ -150,6 +150,7 @@ section p {
         text-align: center;
         justify-content: center;
         background-color: var(--teal);
+        color: white;
         font-size: 1rem;
         white-space: nowrap;
         border-radius: 20px;
@@ -160,7 +161,7 @@ section p {
     /* Added styling and pointer cursor on hover */
     .grid-item:hover {
         background-color: var(--green);
-        color: var(--text-color);
+        color: var(--light);
         border: 1px black;
         cursor: pointer;
     }
@@ -175,6 +176,13 @@ section p {
         color: var(--darkblue);
     }
 
+/* Feedback styling */
+.check {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--light);
+}
+
 /* Results Page Container */
 .results {
     color: var(--text-color);
@@ -188,8 +196,8 @@ h2 {
 
 /* Player Score Styling */
 .playerScore {
-    margin: 5px;
-    padding: 5px;
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 
 #userScore {
@@ -199,6 +207,7 @@ h2 {
 /* Score Input Styling */
 input[type="text"] {
     font-family: 'Questrial', sans-serif;
+    background-color: var(--light);
     height: 1.5rem;
     border: none;
     padding: 5px;
